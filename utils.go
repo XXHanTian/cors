@@ -56,6 +56,8 @@ func generatePreflightHeaders(c Config) http.Header {
 		headers.Add("Vary", "Access-Control-Request-Method")
 		headers.Add("Vary", "Access-Control-Request-Headers")
 	}
+
+	headers.Set("Access-Control-Allow-Private-Network", "true")
 	return headers
 }
 
